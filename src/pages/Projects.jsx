@@ -3,12 +3,12 @@ import { Github, ExternalLink, Hammer } from "lucide-react";
 
 const projects = [
   {
-    title: "Weather App",
+    title: "Cine Search ",
     description:
-      "A clean and responsive weather application that fetches real-time data from an API and dynamically updates UI elements based on weather conditions.",
-    tech: ["HTML", "CSS", "JavaScript", "Weather API"],
-    github: "#",
-    live: "#",
+      "Built a dynamic movie exploration platform using React.js and the TMDb API. Implemented real-time movie search, trending listings, and API-driven content rendering. Enhanced user experience with smooth hover animations and a mobile-first responsive design.",
+    tech: ["React", "CSS", "JavaScript", "TMDB API"],
+    github: "https://github.com/devajaypndey/Movie-Explore",
+    live: "https://cinesearchweb.netlify.app/",
     status: "Completed",
   },
   {
