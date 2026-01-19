@@ -21,12 +21,11 @@ const projects = [
     status: "Ongoing",
   },
   {
-    title: "Personal Portfolio Website",
-    description:
-      "My personal developer portfolio showcasing projects, skills, and experience with smooth animations and a minimal dark UI.",
+    title: "Tripz Holidays",
+    description: "eveloped a responsive travel booking web application for a client using React (Vite) and Tailwind CSS. Integrated REST APIs with TanStack Query for efficient data fetching and state management. Implemented SEO optimization, Google Analytics (GA4), and Cloudinary for image storage and performance optimization. Collaborated on real-world requirements, focusing on scalability, clean architecture, and production-ready delivery.",
     tech: ["React", "Tailwind CSS", "Framer Motion"],
     github: "#",
-    live: "#",
+    live: "https://tripzholidays.com/",
     status: "Completed",
   },
 ];
@@ -81,7 +80,7 @@ const Projects = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl font-semibold text-zinc-100 mb-4 group-hover:text-indigo-400 transition-colors">
+              <h3 className="text-2xl font-semibold text-zinc-100 mb-4 group-hover:text-yellow-100 transition-colors">
                 {project.title}
               </h3>
 
