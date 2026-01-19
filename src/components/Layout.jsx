@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Outlet, Link, useLocation } from "react-router-dom";
 import { Menu, X, Sparkles } from "lucide-react";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaEnvelope,
-  FaPinterest,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaPinterest } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const Layout = () => {
@@ -105,54 +100,53 @@ const Layout = () => {
           </div>
 
           {/* Mobile Menu */}
-{/* Mobile Drawer Overlay */}
-{isMenuOpen && (
-  <div className="fixed inset-0 z-40 md:hidden">
-    {/* Backdrop */}
-    <div
-      className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-      onClick={closeMenu}
-    />
+          {isMenuOpen && (
+            <div className="fixed inset-0 z-40 md:hidden">
+              {/* Backdrop */}
+              <div
+                className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+                onClick={closeMenu}
+              />
 
-    {/* Drawer */}
-    <div className="absolute top-0 left-0 right-0 
+              {/* Drawer */}
+              <div
+                className="absolute top-0 left-0 right-0 
                     bg-slate-950 
                     border-b border-white/10
                     pt-24 pb-8 px-6
-                    animate-in slide-in-from-top duration-300">
-      
-      <div className="flex flex-col gap-3">
-        {navLinks.map((link) => (
-          <Link
-            key={link.name}
-            to={link.path}
-            onClick={closeMenu}
-            className={`px-4 py-4 rounded-xl text-lg font-medium transition-all ${
-              location.pathname === link.path
-                ? "bg-white/10 text-white border border-cyan-400/40"
-                : "text-white/80 hover:bg-white/5"
-            }`}
-          >
-            {link.name}
-          </Link>
-        ))}
+                    animate-in slide-in-from-top duration-300"
+              >
+                <div className="flex flex-col gap-3">
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      to={link.path}
+                      onClick={closeMenu}
+                      className={`px-4 py-4 rounded-xl text-lg font-medium transition-all ${
+                        location.pathname === link.path
+                          ? "bg-white/10 text-white border border-cyan-400/40"
+                          : "text-white/80 hover:bg-white/5"
+                      }`}
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
 
-        {/* Resume Button */}
-        <a
-          href="/Resume_Ajay_Pandey.pdf"
-          download
-          onClick={closeMenu}
-          className="mt-4 px-4 py-4 rounded-xl text-lg font-semibold 
+                  {/* Resume Button */}
+                  <a
+                    href="/Resume_Ajay_Pandey.pdf"
+                    download
+                    onClick={closeMenu}
+                    className="mt-4 px-4 py-4 rounded-xl text-lg font-semibold 
                      bg-linear-to-r from-cyan-500 to-indigo-500
                      text-white text-center"
-        >
-          Download Resume
-        </a>
-      </div>
-    </div>
-  </div>
-)}
-
+                  >
+                    Download Resume
+                  </a>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
