@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Sparkles, Code2, Palette, Github, Linkedin, Mail } from 'lucide-react';
 import Image from "../assets/image.png"
@@ -32,7 +32,7 @@ const Home = () => {
             </div>
 
             <div className="relative z-10 container mx-auto px-6 py-12 min-h-screen flex items-center">
-                <div className="grid md:grid-cols-2 gap-12 items-center w-full">
+                <div className="grid md:grid-cols-2 gap-12 items-center w-full max-w-6xl mx-auto">
 
                     {/* LEFT */}
                     <div className="space-y-8 animate-fade-in">
@@ -91,13 +91,6 @@ const Home = () => {
                             >
                                 Get in Touch
                             </button>
-                        </div>
-
-                        {/* Social Links (navigate) */}
-                        <div className="flex gap-4">
-                            <button onClick={() => navigate('/github')} className="icon-btn"><Github size={20} /></button>
-                            <button onClick={() => navigate('/linkedin')} className="icon-btn"><Linkedin size={20} /></button>
-                            <button onClick={() => navigate('/email')} className="icon-btn"><Mail size={20} /></button>
                         </div>
                     </div>
 
