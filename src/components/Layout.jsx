@@ -105,26 +105,54 @@ const Layout = () => {
           </div>
 
           {/* Mobile Menu */}
-          {isMenuOpen && (
-            <div className="md:hidden mt-4 pb-4 border-t border-white/10 pt-4 animate-in slide-in-from-top-5 duration-200">
-              <div className="flex flex-col space-y-2">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.name}
-                    to={link.path}
-                    className={`px-4 py-3 text-base font-medium rounded-lg transition-all ${
-                      location.pathname === link.path
-                        ? "bg-white/10 text-white border border-cyan-400/50"
-                        : "text-white/70 hover:text-white hover:bg-white/5"
-                    }`}
-                    onClick={closeMenu}
-                  >
-                    {link.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
+{/* Mobile Drawer Overlay */}
+{isMenuOpen && (
+  <div className="fixed inset-0 z-40 md:hidden">
+    {/* Backdrop */}
+    <div
+      className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+      onClick={closeMenu}
+    />
+
+    {/* Drawer */}
+    <div className="absolute top-0 left-0 right-0 
+                    bg-slate-950 
+                    border-b border-white/10
+                    pt-24 pb-8 px-6
+                    animate-in slide-in-from-top duration-300">
+      
+      <div className="flex flex-col gap-3">
+        {navLinks.map((link) => (
+          <Link
+            key={link.name}
+            to={link.path}
+            onClick={closeMenu}
+            className={`px-4 py-4 rounded-xl text-lg font-medium transition-all ${
+              location.pathname === link.path
+                ? "bg-white/10 text-white border border-cyan-400/40"
+                : "text-white/80 hover:bg-white/5"
+            }`}
+          >
+            {link.name}
+          </Link>
+        ))}
+
+        {/* Resume Button */}
+        <a
+          href="/Resume_Ajay_Pandey.pdf"
+          download
+          onClick={closeMenu}
+          className="mt-4 px-4 py-4 rounded-xl text-lg font-semibold 
+                     bg-linear-to-r from-cyan-500 to-indigo-500
+                     text-white text-center"
+        >
+          Download Resume
+        </a>
+      </div>
+    </div>
+  </div>
+)}
+
         </div>
       </nav>
 
