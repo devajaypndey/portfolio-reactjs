@@ -6,8 +6,7 @@ The portfolio focuses on clean UI, smooth animations, and a modern developer-fri
 ---
 
 ## 🌐 Live Preview
-👉 (Add your live link here once deployed)  
-Example: https://portfolio-reactj.vercel.app
+https://portfolio-reactj.vercel.app
 
 ---
 
