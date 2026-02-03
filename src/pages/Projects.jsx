@@ -12,13 +12,12 @@ const projects = [
     status: "Completed",
   },
   {
-    title: "Todo App (Glassy UI)",
+    title: "Sleep Timer – Smart Chrome Extension for Focus & Media Control",
     description:
-      "A modern Todo application built with React and Tailwind CSS featuring a glassmorphism UI and planned authentication flow using React Router.",
-    tech: ["React", "Tailwind CSS", "React Router"],
-    github: "#",
-    live: "#",
-    status: "Ongoing",
+      "Built a production-ready Chrome extension that allows users to set a smart sleep timer to automatically pause or mute browser videos. Designed with a dark Material UI interface and accessible Radix UI components, featuring a live countdown and background-persistent timer logic.",
+    tech: ["React", "CSS", "RadixUI", "MaterialUI", "Manifest v3", "Javascript"],
+    github: "https://github.com/devajaypndey/sleep-timer-extension",
+    status: "Completed",
   },
   {
     title: "Tripz Holidays",
